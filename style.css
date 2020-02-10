@@ -222,6 +222,8 @@ span {
   margin: 1rem 0 1rem 0;
   width: 35%;
   font-weight: 800;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
 }
 #socials > button > p {
   padding-top: 0.2rem;
