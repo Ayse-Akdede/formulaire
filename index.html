@@ -1,0 +1,82 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img id="back" src="arrow.png" alt="back" />
+      <h1>login</h1>
+      <p>Hi, Welcome back!</p>
+    </header>
+
+    <form>
+      <div class="email field">
+        <input
+          lass="form-control"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email.."
+        />
+        <label class="form-control-placeholder" for="email">Email</label>
+      </div>
+      <div id="input_container " class="password field">
+        <input
+          lass="form-control"
+          type="password"
+          id="password"
+          name="password"
+          text
+          placeholder="Write your password..."
+        />
+        <label class="form-control-placeholder " for="password">Password</label>
+        <img
+          id="eye"
+          src="show.svg"
+          alt="click"
+          title="Click on me to show password"
+          onclick="showPassword()"
+        />
+      </div>
+
+      <div id="forgot">
+        <div id="checkbox">
+          <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+          <label id="rememberme" for="rememberMe">Remember me</label>
+        </div>
+        <p>Forgot Password ?</p>
+      </div>
+
+      <input type="submit" value="Log In" />
+    </form>
+    <div>
+      <div id="logElse">
+        <p>
+          <span>
+            or log in with
+          </span>
+        </p>
+      </div>
+      <div id="socials">
+        <button id="google">
+          <img src="google.png" alt="google" />
+          <p>Google</p>
+        </button>
+        <button id="facebook">
+          <img src="facebook.png" alt="facebook" />
+          <p>Facebook</p>
+        </button>
+      </div>
+      <div id="noAccount">
+        <p>Don't have an account ? <span>Sign Up</span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
