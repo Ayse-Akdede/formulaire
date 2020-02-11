@@ -1,247 +1,249 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  border-radius: 5px;
-  background-color: #ececec;
-}
-body > p {
-  padding: 1rem;
-}
-header {
-  background-color: rgb(94, 56, 230);
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
-  padding-bottom: 0.4rem;
-}
-header > h1,
-header > p {
-  text-align: center;
-  color: white;
-}
-/*Go back button */
-#back {
-  background-color: white;
-  border-radius: 0.4rem;
-  width: 1rem;
-  padding: 0.2rem;
-  margin: 2rem;
-}
-img {
-  width: 20px;
-}
-/*Password input */
-.password {
-  position: relative;
-  display: inline-block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-/* put the eye img inside the password input*/
-.password img {
-  position: absolute;
-  right: 0.2rem;
-  bottom: 0.4rem;
-  width: 1.4rem;
-  opacity: 40%;
-}
-.password > img:hover {
-  cursor: pointer;
-  opacity: 70%;
-}
-/*Mail and Pass word*/
-.field {
-  display: flex;
-  flex-flow: column-reverse;
-  margin-bottom: 1em;
-}
+@media (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    border-radius: 5px;
+    background-color: #ececec;
+  }
+  body > p {
+    padding: 1rem;
+  }
+  header {
+    background-color: rgb(94, 56, 230);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    padding-bottom: 0.4rem;
+  }
+  header > h1,
+  header > p {
+    text-align: center;
+    color: white;
+  }
+  /*Go back button */
+  #back {
+    background-color: white;
+    border-radius: 0.4rem;
+    width: 1rem;
+    padding: 0.2rem;
+    margin: 2rem;
+  }
+  img {
+    width: 20px;
+  }
+  /*Password input */
+  .password {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  /* put the eye img inside the password input*/
+  .password img {
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.4rem;
+    width: 1.4rem;
+    opacity: 40%;
+  }
+  .password > img:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+  /*Mail and Pass word*/
+  .field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+  }
 
-input {
-  left: 0.3rem;
-  font-size: 1rem;
-  border: 0;
-  font-family: inherit;
-  -webkit-appearance: none;
-  border-radius: 0.2rem;
-  cursor: text;
-  padding: 0.3rem;
-}
-input:placeholder-shown + label {
-  color: gray;
-  cursor: text;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transform-origin: left bottom;
-  transform: translate(0.3rem, 1.4rem) scale(1);
-}
-::-webkit-input-placeholder {
-  opacity: 0;
-  transition: inherit;
-}
-input:not(:placeholder-shown) + label {
-  color: gray;
-  transform: translate(0.3rem, 1.4rem) scale(1);
-}
-input:not(:placeholder-shown) {
-  padding-top: 2rem;
-}
-/*Mail and password end*/
-/*Log In submit*/
-form {
-  padding: 1rem;
-}
+  input {
+    left: 0.3rem;
+    font-size: 1rem;
+    border: 0;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0.2rem;
+    cursor: text;
+    padding: 0.3rem;
+  }
+  input:placeholder-shown + label {
+    color: gray;
+    cursor: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0.3rem, 1.4rem) scale(1);
+  }
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  input:not(:placeholder-shown) + label {
+    color: gray;
+    transform: translate(0.3rem, 1.4rem) scale(1);
+  }
+  input:not(:placeholder-shown) {
+    padding-top: 2rem;
+  }
+  /*Mail and password end*/
+  /*Log In submit*/
+  form {
+    padding: 1rem;
+  }
 
-input[type="submit"] {
-  background-color: rgb(94, 56, 230);
-  color: white;
-  padding: 0.7rem;
+  input[type="submit"] {
+    background-color: rgb(94, 56, 230);
+    color: white;
+    padding: 0.7rem;
 
-  border: none;
-  border-radius: 4rem;
-  cursor: pointer;
-  margin: 1rem 0 1rem 0;
-  width: 100%;
-}
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+  }
 
-input[type="submit"]:hover {
-  background-color: rgba(94, 56, 230, 0.774);
-}
-/*Log In submit end*/
+  input[type="submit"]:hover {
+    background-color: rgba(94, 56, 230, 0.774);
+  }
+  /*Log In submit end*/
 
-/*Forgot password part */
-#forgot {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-}
-#forgot > p {
-  text-align: right;
-}
-/* Chackbox customize*/
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px;
-}
-[type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
-  position: relative;
-  padding-left: 1.95em;
-  cursor: pointer;
-}
-input[type="checkbox"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  appearance: checkbox;
-  display: inline-block;
-  width: auto;
-  background-color: white;
-  display: table-cell;
-  vertical-align: middle;
-}
+  /*Forgot password part */
+  #forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  #forgot > p {
+    text-align: right;
+  }
+  /* Chackbox customize*/
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    display: inline-block;
+    width: auto;
+    background-color: white;
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-/* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1.2em;
-  height: 1.2em;
-  background: #fff;
-  border-radius: 20%;
-}
-/* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
-  position: absolute;
-  content: "\2714\0020";
-  top: 0.15em;
-  left: 0.22em;
-  font-size: 1rem;
-  line-height: 0.8;
-  color: gray;
-  transition: all 0.2s;
-  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
-}
-/* checked mark changes */
-[type="checkbox"]:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0);
-}
-[type="checkbox"]:checked + label:after {
-  opacity: 1;
-  transform: scale(1);
-}
-#rememberme {
-  color: black;
-}
-/*Or log in with something else part*/
-#logElse > p {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.2em;
+    height: 1.2em;
+    background: #fff;
+    border-radius: 20%;
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    position: absolute;
+    content: "\2714\0020";
+    top: 0.15em;
+    left: 0.22em;
+    font-size: 1rem;
+    line-height: 0.8;
+    color: gray;
+    transition: all 0.2s;
+    font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+  }
+  /* checked mark changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  #rememberme {
+    color: black;
+  }
+  /*Or log in with something else part*/
+  #logElse > p {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
 
-#logElse > p :before {
-  border-top: 0.125rem solid rgba(128, 128, 128, 0.767);
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 95%;
-  z-index: -1;
-}
+  #logElse > p :before {
+    border-top: 0.125rem solid rgba(128, 128, 128, 0.767);
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
 
-span {
-  background: #ececec;
-  padding: 0 0.7rem;
-}
+  span {
+    background: #ececec;
+    padding: 0 0.7rem;
+  }
 
-/* Google and facebook buttons*/
-#socials {
-  display: inline-flex;
-  justify-content: space-around;
-  width: 100%;
-}
+  /* Google and facebook buttons*/
+  #socials {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+  }
 
-#socials > button {
-  display: inline-flex;
-  justify-content: space-around;
-  padding: 0.7rem;
-  border: none;
-  border-radius: 4rem;
-  cursor: pointer;
-  margin: 1rem 0 1rem 0;
-  width: 35%;
-  font-weight: 800;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
-}
-#socials > button > p {
-  padding-top: 0.2rem;
-}
-#google {
-  background-color: white;
-  color: black;
-}
-#facebook {
-  background-color: #3b5998;
-  color: white;
-  vertical-align: center;
-}
-/* Don't have account part*/
-#noAccount > p {
-  text-align: center;
-}
-#noAccount > p span {
-  color: rgb(94, 56, 230);
-  padding: 0;
+  #socials > button {
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    margin: 1rem 0 1rem 0;
+    width: 35%;
+    font-weight: 800;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+  #socials > button > p {
+    padding-top: 0.2rem;
+  }
+  #google {
+    background-color: white;
+    color: black;
+  }
+  #facebook {
+    background-color: #3b5998;
+    color: white;
+    vertical-align: center;
+  }
+  /* Don't have account part*/
+  #noAccount > p {
+    text-align: center;
+  }
+  #noAccount > p span {
+    color: rgb(94, 56, 230);
+    padding: 0;
+  }
 }
