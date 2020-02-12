@@ -1,39 +1,72 @@
-@media (min-width: 320px) and (max-width: 1281px) {
+@media (min-width: 200px) {
   * {
     margin: 0;
     padding: 0;
   }
   body {
+    font-size: 62.5%;
+    font-family: sans-serif;
     border-radius: 5px;
     background-color: #ececec;
+    position: relative;
   }
   body > p {
     padding: 1rem;
   }
   header {
-    background-color: rgb(94, 56, 230);
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
+    background-color: #8b00dd;
+    height: 13rem;
+    border-radius: 2.5rem 2.5rem 0 2.5rem;
     padding-bottom: 0.4rem;
+    position: relative;
+    overflow: hidden;
   }
-  header > h1,
-  header > p {
+  #headerText {
+    bottom: 0;
+  }
+  #headerText > h1 {
+    font-size: 2.4rem;
+  }
+  #headerText > p {
+    font-size: 1rem;
+  }
+  #headerText > h1,
+  #headerText > p {
     text-align: center;
     color: white;
+    position: relative;
+    z-index: 2;
   }
   /*header circles in background*/
-  /*Go back button */
+  header::before,
+  header::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border: 3rem solid #9b33e6;
+    opacity: 70%;
+  }
+  header::before {
+    top: -11rem;
+    left: -11rem;
+  }
+  header::after {
+    bottom: -11rem;
+    right: -11rem;
+  }
+  /*Go back button in the HEADER*/
   #back {
     background-color: white;
-    border-radius: 0.4rem;
+    border-radius: 0.6rem;
     width: 1rem;
-    padding: 0.2rem;
-    margin: 2rem;
+    padding: 0.4rem;
+    position: relative;
+    z-index: 2;
+    margin: 4rem 0 0 1.5rem;
   }
-  img {
-    width: 20px;
-  }
+
   /*Password input */
   .password {
     position: relative;
@@ -41,10 +74,10 @@
     margin-bottom: 1rem;
   }
   /* put the eye img inside the password input*/
-  .password img {
+  .password > img {
     position: absolute;
     right: 0.2rem;
-    bottom: 0.4rem;
+    bottom: 0.15rem;
     width: 1.4rem;
     opacity: 40%;
   }
@@ -75,7 +108,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     transform-origin: left bottom;
-    transform: translate(0.3rem, 1.4rem) scale(1);
+    transform: translate(0.3rem, 1.25rem) scale(1);
   }
   ::-webkit-input-placeholder {
     opacity: 0;
@@ -83,7 +116,7 @@
   }
   input:not(:placeholder-shown) + label {
     color: gray;
-    transform: translate(0.3rem, 1.4rem) scale(1);
+    transform: translate(0.3rem, 1.25rem) scale(1);
   }
   input:not(:placeholder-shown) {
     padding-top: 2rem;
@@ -95,15 +128,15 @@
   }
 
   input[type="submit"] {
-    background-color: rgb(94, 56, 230);
+    background-color: #8b00dd;
     color: white;
-    padding: 0.7rem;
-
-    border: none;
+    padding: 0.9rem;
     border-radius: 4rem;
     cursor: pointer;
     margin: 1rem 0 1rem 0;
     width: 100%;
+    font-size: 1rem;
+    font-weight: 900;
   }
 
   input[type="submit"]:hover {
@@ -119,6 +152,10 @@
   }
   #forgot > p {
     text-align: right;
+  }
+  #forgot > p,
+  #forgot > #checkbox > label {
+    color: #606060;
   }
   /* Chackbox customize*/
   [type="checkbox"]:not(:checked),
@@ -164,7 +201,7 @@
     left: 0.22em;
     font-size: 1rem;
     line-height: 0.8;
-    color: gray;
+    color: grey;
     transition: all 0.2s;
     font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
   }
@@ -177,18 +214,18 @@
     opacity: 1;
     transform: scale(1);
   }
-  #rememberme {
-    color: black;
-  }
+
   /*Or log in with something else part*/
   #logElse > p {
     text-align: center;
     position: relative;
     z-index: 1;
+    font-size: 1rem;
+    color: #606060;
   }
 
   #logElse > p :before {
-    border-top: 0.125rem solid rgba(128, 128, 128, 0.767);
+    border-top: 0.09rem solid rgb(167, 167, 167);
     content: "";
     margin: 0 auto;
     position: absolute;
@@ -211,7 +248,6 @@
     justify-content: space-around;
     width: 100%;
   }
-
   #socials > button {
     display: inline-flex;
     justify-content: space-around;
@@ -227,6 +263,9 @@
   }
   #socials > button > p {
     padding-top: 0.2rem;
+  }
+  #socials > button > img {
+    width: 1.25rem;
   }
   #google {
     background-color: white;
