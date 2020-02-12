@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 1281px) {
   * {
     margin: 0;
     padding: 0;
@@ -22,6 +22,7 @@
     text-align: center;
     color: white;
   }
+  /*header circles in background*/
   /*Go back button */
   #back {
     background-color: white;
@@ -37,7 +38,6 @@
   .password {
     position: relative;
     display: inline-block;
-    margin-top: 2rem;
     margin-bottom: 1rem;
   }
   /* put the eye img inside the password input*/
@@ -56,7 +56,6 @@
   .field {
     display: flex;
     flex-flow: column-reverse;
-    margin-bottom: 1em;
   }
 
   input {
