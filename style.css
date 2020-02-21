@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
   }
+
   body {
     font-size: 62.5%;
     font-family: sans-serif;
@@ -10,9 +11,11 @@
     background-color: #ececec;
     position: relative;
   }
-  body > p {
+
+  body>p {
     padding: 1rem;
   }
+
   header {
     background-color: #8b00dd;
     height: 13rem;
@@ -21,22 +24,28 @@
     position: relative;
     overflow: hidden;
   }
+
   #headerText {
     bottom: 0;
+    margin-top: 3rem;
   }
-  #headerText > h1 {
+
+  #headerText>h1 {
     font-size: 2.4rem;
   }
-  #headerText > p {
+
+  #headerText>p {
     font-size: 1rem;
   }
-  #headerText > h1,
-  #headerText > p {
+
+  #headerText>h1,
+  #headerText>p {
     text-align: center;
     color: white;
     position: relative;
     z-index: 2;
   }
+
   /*header circles in background*/
   header::before,
   header::after {
@@ -48,14 +57,17 @@
     border: 3rem solid #9b33e6;
     opacity: 70%;
   }
+
   header::before {
     top: -11rem;
     left: -11rem;
   }
+
   header::after {
     bottom: -11rem;
     right: -11rem;
   }
+
   /*Go back button in the HEADER*/
   #back {
     background-color: white;
@@ -73,18 +85,21 @@
     display: inline-block;
     margin-bottom: 1rem;
   }
+
   /* put the eye img inside the password input*/
-  .password > img {
+  .password>img {
     position: absolute;
     right: 0.2rem;
     bottom: 0.15rem;
     width: 1.4rem;
     opacity: 40%;
   }
-  .password > img:hover {
+
+  .password>img:hover {
     cursor: pointer;
     opacity: 70%;
   }
+
   /*Mail and Pass word*/
   .field {
     display: flex;
@@ -101,7 +116,8 @@
     cursor: text;
     padding: 0.3rem;
   }
-  input:placeholder-shown + label {
+
+  input:placeholder-shown+label {
     color: gray;
     cursor: text;
     white-space: nowrap;
@@ -110,17 +126,21 @@
     transform-origin: left bottom;
     transform: translate(0.3rem, 1.25rem) scale(1);
   }
+
   ::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
   }
-  input:not(:placeholder-shown) + label {
+
+  input:not(:placeholder-shown)+label {
     color: gray;
     transform: translate(0.3rem, 1.25rem) scale(1);
   }
+
   input:not(:placeholder-shown) {
     padding-top: 2rem;
   }
+
   /*Mail and password end*/
   /*Log In submit*/
   form {
@@ -142,6 +162,7 @@
   input[type="submit"]:hover {
     background-color: rgba(94, 56, 230, 0.774);
   }
+
   /*Log In submit end*/
 
   /*Forgot password part */
@@ -150,25 +171,30 @@
     justify-content: space-between;
     font-size: 0.9rem;
   }
-  #forgot > p {
+
+  #forgot>p {
     text-align: right;
   }
-  #forgot > p,
-  #forgot > #checkbox > label {
+
+  #forgot>p,
+  #forgot>#checkbox>label {
     color: #606060;
   }
+
   /* Chackbox customize*/
   [type="checkbox"]:not(:checked),
   [type="checkbox"]:checked {
     position: absolute;
     left: -9999px;
   }
-  [type="checkbox"]:not(:checked) + label,
-  [type="checkbox"]:checked + label {
+
+  [type="checkbox"]:not(:checked)+label,
+  [type="checkbox"]:checked+label {
     position: relative;
     padding-left: 1.95em;
     cursor: pointer;
   }
+
   input[type="checkbox"] {
     -webkit-appearance: checkbox;
     -moz-appearance: checkbox;
@@ -181,8 +207,8 @@
   }
 
   /* checkbox aspect */
-  [type="checkbox"]:not(:checked) + label:before,
-  [type="checkbox"]:checked + label:before {
+  [type="checkbox"]:not(:checked)+label:before,
+  [type="checkbox"]:checked+label:before {
     content: "";
     position: absolute;
     left: 0;
@@ -192,9 +218,10 @@
     background: #fff;
     border-radius: 20%;
   }
+
   /* checked mark aspect */
-  [type="checkbox"]:not(:checked) + label:after,
-  [type="checkbox"]:checked + label:after {
+  [type="checkbox"]:not(:checked)+label:after,
+  [type="checkbox"]:checked+label:after {
     position: absolute;
     content: "\2714\0020";
     top: 0.15em;
@@ -205,18 +232,20 @@
     transition: all 0.2s;
     font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
   }
+
   /* checked mark changes */
-  [type="checkbox"]:not(:checked) + label:after {
+  [type="checkbox"]:not(:checked)+label:after {
     opacity: 0;
     transform: scale(0);
   }
-  [type="checkbox"]:checked + label:after {
+
+  [type="checkbox"]:checked+label:after {
     opacity: 1;
     transform: scale(1);
   }
 
   /*Or log in with something else part*/
-  #logElse > p {
+  #logElse>p {
     text-align: center;
     position: relative;
     z-index: 1;
@@ -224,7 +253,7 @@
     color: #606060;
   }
 
-  #logElse > p :before {
+  #logElse>p :before {
     border-top: 0.09rem solid rgb(167, 167, 167);
     content: "";
     margin: 0 auto;
@@ -248,7 +277,8 @@
     justify-content: space-around;
     width: 100%;
   }
-  #socials > button {
+
+  #socials>button {
     display: inline-flex;
     justify-content: space-around;
     padding: 0.7rem;
@@ -261,26 +291,32 @@
     padding-left: 1.4rem;
     padding-right: 1.4rem;
   }
-  #socials > button > p {
+
+  #socials>button>p {
     padding-top: 0.2rem;
   }
-  #socials > button > img {
+
+  #socials>button>img {
     width: 1.25rem;
   }
+
   #google {
     background-color: white;
     color: black;
   }
+
   #facebook {
     background-color: #3b5998;
     color: white;
     vertical-align: center;
   }
+
   /* Don't have account part*/
-  #noAccount > p {
+  #noAccount>p {
     text-align: center;
   }
-  #noAccount > p span {
+
+  #noAccount>p span {
     color: rgb(94, 56, 230);
     padding: 0;
   }
